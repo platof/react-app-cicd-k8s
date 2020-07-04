@@ -32,7 +32,7 @@ pipeline {
             agent any
             steps {
                kubernetesDeploy(
-                   kubeconfigId: 'kubeconfig'
+                   kubeconfigId: 'kubeconfig',
                    configs: 'react-app-kube.yml',
                    enableConfigSubtitution: true
                )
