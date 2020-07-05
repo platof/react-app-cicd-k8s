@@ -31,12 +31,8 @@ pipeline {
         stage('Deploy to Production') {
             agent any
             steps {
-               kubernetesDeploy(
-                   kubeconfigId: 'kubeconfig',
-                   configs: 'react-app-kube.yaml',
-                   enableConfigSubstitution: true
-               )
-                
+
+                sh 'kubectl --kubeconfig=~/kubeconf get nodes'
             }
         }
             
