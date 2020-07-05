@@ -32,7 +32,8 @@ pipeline {
             agent any
             steps {
 
-                sh 'kubectl --kubeconfig=~/kubeconf get nodes'
+                sh 'echo $HOME'
+                // sh 'kubectl --kubeconfig=~/kubeconf get nodes'
             }
         }
             
