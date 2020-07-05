@@ -32,8 +32,7 @@ pipeline {
             agent any
             steps {
 
-                sh 'echo $HOME'
-                // sh 'kubectl --kubeconfig=~/kubeconf get nodes'
+                sh 'kubectl --kubeconfig=$HOME/kubeconf apply -f react-app-kube.yaml'
             }
         }
             
